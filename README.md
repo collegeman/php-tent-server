@@ -6,8 +6,8 @@ a [Multisite WordPress](http://wordpress.org) install.
 
 For a client implementation in PHP, check out [php-tent-client](http://github.com/collegeman/php-tent-client).
 
-If you'd like to be a contributor, checkout the TODO, then [e-mail us](mailto:yo@fatpandadev.com)
-to find out what we need help with. Thanks!
+If you'd like to be a contributor, checkout the [TODO](https://github.com/collegeman/php-tent-server/blob/master/TODO.md), 
+then [e-mail us](mailto:yo@fatpandadev.com) to find out what we need help with. Thanks!
 
 ## Running Slim-based Server
 
@@ -35,11 +35,15 @@ Same as for WordPress:
 
 ## Architecture
 
+## Attribution
+
 ## Licensing
 
-This project is dual-licensed: MIT and GPLv2. The only part that is licensed GPL
-are the WordPress-plugin implementations of iTentRouter and iTentData. The rest
-of the codebase is licensed MIT.
+This project is dual-licensed: MIT and GPLv2. Why GPLv2? All WordPress plugins must be GPL'd. 
+
+Every effort has been made to clearly differentiate throughout the codebase.
+
+Please review carefully before inquiring and before creating derivatives.
 
 ### MIT License
 

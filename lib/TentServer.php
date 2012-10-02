@@ -2,6 +2,7 @@
 /**
  * Implements Tent Server API in compliance with Tent.io protocol.
  * @see http://tent.io/docs/app-server
+ * @license MIT
  */
 class TentServer {
 
@@ -19,7 +20,7 @@ class TentServer {
    * @return bool
    */
   function isAuthorized() {
-    
+
   }
 
   /** 

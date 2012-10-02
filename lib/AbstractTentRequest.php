@@ -1,6 +1,7 @@
 <?php
 /**
  * Modelsa request to a Tent server.
+ * @license MIT
  */
 abstract class AbstractTentRequest implements ArrayAccess, Iterator {
 
