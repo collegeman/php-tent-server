@@ -8,43 +8,57 @@ class TentServer {
 
   // an impl of iTentData
   private $_D;
-  // an impl of iTentRequest
+  // an impl of AbstractTentRequest
   private $_R;
 
-  function __construct(/* iTentData */ $data, /* iTentRequest */ $request = null) {
+  private function __construct(/* iTentData */ $data, /* AbstractTentRequest */ $request) {
     $this->_D = $data;
     $this->_R = $R;
   }
 
   /**
+   * @return AbstractTentResponse
+   */
+  private function _exec() {
+    $function = strtolower($this->_R->getMethod()).ucwords($this->_R->getFunctionName());
+    if (strpos($function, '_') === 0) {
+      return TentResponse::error(500, 'Invalid Function: '.$function);
+    }
+    $callable = array($this, $function);
+    return call_user_func_array($callable, $this->_R->getPathArgs());
+  }
+
+  static function exec(/* iTentData */ $data, /* AbstractTentRequest */ $request) {
+    $server = new TentServer($data, $request);
+    return $server->_exec();
+  }
+
+  /**
    * @return bool
    */
-  function isAuthorized() {
+  private function _isAuthorized() {
 
   }
 
   /** 
-   * @param string Scope as defined by
+   * @param string Perimission scope
    * @return bool Should return false if TentServer::isAuthorized is false
+   * @see http://tent.io/docs/app-auth
    */
-  function hasScope($scope) {
+  private function _hasScope($scope) {
 
   }
 
   /**
-   * @param iTentRequest (optiona) when null, references TestServer::$R
-   * @return iTentResponse
+   * Before authenticating a user, the application must be registered with
+   * the specified Tent entity. The first step is to perform discovery on the provided entity url.
    */
-  function exec(/* iTentRequest */ $request = null) {
-    if (is_null($request)) {
-      $request = $this->_R;
-    }
-    if (is_null($request)) {
-      return TentResponse::error("Invalid request: iTentRequest is missing.");
-    }
-    $function = strtolower($this->_R->getMethod()).ucwords($this->_R->getFunctionName());
-    $callable = array($this, $function);
-    return call_user_func_array($callable, $this->_R->getPathArgs());
+  function head() {
+
+  }
+
+  function postApps() {
+
   }
 
   /**
@@ -97,6 +111,14 @@ class TentServer {
    * Apps can end the user's relationship with a follower.
    */
   function deleteFollowers($id) {
+
+  }
+
+  /**
+   * To follow a user, send a POST request with acceptable licenses, post types, and views, and a path to send post notifications to.
+   * @see http://tent.io/docs/server-protocol
+   */
+  function postFollowers() {
 
   }
 

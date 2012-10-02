@@ -1,6 +1,6 @@
 # php-tent-server
 
-A server implementation of the Tent.io protocol, deployable as a 
+A multi-user server implementation of the Tent.io protocol, deployable as a 
 [Slim](http://www.slimframework.com/)-based server, or running inside 
 a [Multisite WordPress](http://wordpress.org) install.
 

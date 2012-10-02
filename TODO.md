@@ -7,5 +7,4 @@
 
 ## Client TODO
 
-If you'd like to be a contributor, checkout the TODO, then [e-mail us](mailto:yo@fatpandadev.com)
-to find out what we need help with. Thanks!
+
