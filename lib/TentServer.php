@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Implements Tent Server API in compliance with Tent.io protocol.
  * @see http://tent.io/docs/app-server
