@@ -1,3 +1,6 @@
 [submodule "lib/php-tent-client"]
 	path = lib/php-tent-client
 	url = git@github.com:collegeman/php-tent-client
+[submodule "php-tent-server/php-tent-client"]
+	path = php-tent-server/php-tent-client
+	url = git@github.com:collegeman/php-tent-client.git
