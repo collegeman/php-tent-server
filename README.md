@@ -1,4 +1,10 @@
-# php-tent-server
+# php-tent-server (v.0.1a)
+
+THIS PROJECT IS NOT READY FOR PRODUCTION.
+AT PRESENT OUR FOCUS IS ON IMPLEMENTING A
+QUALITY [CLIENT](http://github.com/collegeman/php-tent-client). 
+FOLLOW THIS PROJECT TO FIND OUT WHEN USABLE 
+CODE IS AVAILABLE!
 
 A multi-user server implementation of the Tent.io protocol, deployable as a 
 [Slim](http://www.slimframework.com/)-based server, or running inside 

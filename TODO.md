@@ -7,4 +7,8 @@
 
 ## Client TODO
 
+* Submit incorrect URI into Console App, and no error is reported
+* Not storing servers in configuration?
+* Make sure multiple servers are supported throughout
+* Support multiple signing algorithms
 

@@ -115,7 +115,8 @@ class TentServer {
   }
 
   /**
-   * To follow a user, send a POST request with acceptable licenses, post types, and views, and a path to send post notifications to.
+   * To follow a user, send a POST request with acceptable licenses, post types, 
+   * and views, and a path to send post notifications to.
    * @see http://tent.io/docs/server-protocol
    */
   function postFollowers() {
